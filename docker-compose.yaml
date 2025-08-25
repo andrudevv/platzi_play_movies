@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:latest'
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: platzi_play_db_v3x2
+      POSTGRES_USER: platzi_play
+      POSTGRES_PASSWORD: fKki6rM3JOGwj99yMI3Ec2bwQd8bETla
+    ports:
+      - '5433:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
