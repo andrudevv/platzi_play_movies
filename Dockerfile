@@ -1,5 +1,5 @@
 # Etapa 1
-FROM gradle:8:14:3-jdk21 AS build
+FROM gradle:8.14.3-jdk21 AS build
 COPY --chown=gradle:gradle . /app
 WORKDIR /app
 RUN gradle bootJar --noo-daemon
